@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Roboto:wght@500&display=swap');*
+*
+{
+    font-family: Roboto;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-color: #efcfe3;
+    background-image: url('ng.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* HEADER */
+header{
+    background-color: #b3dee2;
+    height:100px;
+    width:100%;
+}
+
+header .head{
+    width:70%;
+    height: 100%;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header a{
+    color: white;
+    font-family: Outfit;
+    text-decoration: none;
+}
+
+header .sweetteas {
+    width:40%;
+    float:left;
+}
+
+header .tabs{
+    float: right;
+    width: 60%;
+    text-align: right;
+}
+
+header .tabs a {
+    padding: 0 30px;
+}
+
+#coloredsignin{
+    color: #e27396;
+}
+
+
+
+
+/*CONTENT*/
+
+.centerbox{
+    border-radius: 20px;
+    background-color: white;
+    margin: auto;
+    height: 650px;
+    width: 55%;
+    transform: translate(0%,15%);
+    overflow: hidden;
+    box-shadow: 10px 10px 15px #c9c2c4;
+}
+
+#bluebox{
+    border-radius: 15px;
+    background-color: #C7E7E9;
+    height: 95%;
+    width: 40%;
+    margin: 1.5% 2%;
+    float: left;
+    position: relative;
+}
+
+#bluebox img{
+    width: 200%;
+    margin-left:-40%;
+    margin-top:-30%;
+}
+
+.formcontent{
+    float: right;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#514A4C;
+}
+
+.welcometext{
+    text-align: center;
+}
+
+#wsttext{
+    font-family: Outfit;
+    font-size: 30px;
+    color: #F481A6;
+    padding-bottom: 15px;
+}
+
+#wscaption{
+    padding-bottom:20px;
+}
+
+.centerbox form{
+    text-align: left;
+}
+
+form input{
+    position: relative;
+}
+
+form label{
+    font-size: 14px;
+}
+
+form #labelandboxes{
+    position: relative;
+  
+}
+
+form .textbox{
+    border: 1px pink solid;
+    border-radius: 5px;
+    height: 40px;
+    margin:10px 0;
+    width: 340px;
+}
+
+form #signupbttn{
+    position: relative;
+}
+
+form #signup{
+    border: 1px #e27396 solid;
+    border-radius: 5px;
+    background-color: #e27396;
+    color: white;
+    margin-top: 15px;
+    text-align: center;
+    height: 48px;
+    width: 346px;
+    font-size: 15px;
+}
+
+form #formfooter{
+    position: relative;
+    margin-top: 45px;
+    font-size: small;
+    width: 345px;
+    text-align: center;
+    color: #ad9ba1;
+}
+
+form a{
+    color: #EA9AB2;
+    text-decoration: underline;
+}
