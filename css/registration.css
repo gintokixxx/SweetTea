@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Roboto:wght@500&display=swap');*
+
 *
 {
     font-family: Roboto;
@@ -8,7 +9,7 @@
 
 body{
     background-color: #efcfe3;
-    background-image: url('ng.png');
+    background-image: url('../img/ng.png');
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -86,6 +87,9 @@ header .tabs a {
     margin-top:-30%;
 }
 
+
+
+/*FORM CONTENT*/
 .formcontent{
     float: right;
     width: 55%;
@@ -104,11 +108,11 @@ header .tabs a {
     font-family: Outfit;
     font-size: 30px;
     color: #F481A6;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 #wscaption{
-    padding-bottom:20px;
+    padding-bottom:15px;
 }
 
 .centerbox form{
@@ -117,6 +121,10 @@ header .tabs a {
 
 form input{
     position: relative;
+}
+
+form input:focus{
+    outline: 0;
 }
 
 form label{
@@ -132,8 +140,16 @@ form .textbox{
     border: 1px pink solid;
     border-radius: 5px;
     height: 40px;
-    margin:10px 0;
+    margin-top: 7px;
     width: 340px;
+    text-indent: 15px;
+    color:#514A4C;
+    padding:1.5px;
+    transition: 0.2s ease-in-out;
+}
+
+.textbox:hover{
+    border-color:rgb(255, 93, 120);
 }
 
 form #signupbttn{
@@ -145,16 +161,23 @@ form #signup{
     border-radius: 5px;
     background-color: #e27396;
     color: white;
-    margin-top: 15px;
+    margin: 10px 0;
     text-align: center;
     height: 48px;
     width: 346px;
     font-size: 15px;
+    transition: 0.25s ease-in;
+}
+
+form #signup:hover{
+    background-color: #d6557e;
+    border-color: #d6557e;
+    cursor:pointer;
 }
 
 form #formfooter{
     position: relative;
-    margin-top: 45px;
+    margin-top: 5px;
     font-size: small;
     width: 345px;
     text-align: center;
@@ -164,4 +187,33 @@ form #formfooter{
 form a{
     color: #EA9AB2;
     text-decoration: underline;
+    transition: 0.2s ease-in;
 }
+
+form a:hover{
+    color:#d6557e;
+}
+
+
+/* FOR ERROR HANDLING */
+.input-control{
+    margin: 5px 0;
+}
+
+.input-control small{
+    color:#d65e68;
+    font-size: 10px;  
+}
+
+.input-control.error .textbox{
+    border-color:#cf727a;
+}
+
+.input-control.success .textbox{
+    border-color: #68ca5b;
+}
+
+.input-control.success small{
+    visibility: hidden;
+}
+
