@@ -1,6 +1,6 @@
 <?php
 
-$connect = mysqli_connect("localhost", "root", "", "totebags");
+$connect = mysqli_connect("localhost", "root", "", "sweettea");
 
 if(!empty($_POST["username"])){
     $query = "SELECT * FROM regusers WHERE name ='" .$_POST["username"] . "'";
