@@ -61,25 +61,25 @@
                         <div class="input-control"> 
                             <label for="username" class="userlbl">Username:</label><br>
                             <input type="text" id="username" size="50" maxlength="50"  class="textbox" name="username" oninput="checkUsername()"><br>
-                            <small id="error-user"> &nbsp;</small> 
+                            <small id="error-user"> &nbsp;</small><br>
                         </div>
 
                         <div class="input-control"> 
                             <label for="email" class="emaillbl">E-mail:</label><br>
                             <input type="text" id="email" size="50" maxlength="50" class="textbox" name="email"><br>
-                            <small>&nbsp;</small> 
+                            <small>&nbsp;</small><br>
                         </div>
 
                         <div class="input-control"> 
                             <label for="password" class="passlbl">Password:</label><br>
                             <input type="password" id="password" size="50" maxlength="16" class="textbox" name="password"><br>
-                            <small>&nbsp;</small> 
+                            <small>&nbsp;</small><br>
                         </div>
 
                         <div class="input-control"> 
                             <label for="cpassword" class="cpasslbl">Confirm Password:</label><br>
                             <input type="password" id="cpassword" size="50" maxlength="16" class="textbox" name="cpassword"><br>
-                            <small>&nbsp;</small> 
+                            <small>&nbsp;</small><br>
                         </div>
 
                         </div>
