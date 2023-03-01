@@ -7,6 +7,9 @@ if(isset($_POST["submit"])){
     include "../classes/dbh.classes.php";
 
     if(isset($_POST['submit'])){
+
+        session_start();
+        
         $username = mysqli_real_escape_string($conn, $_POST['username']);
         $password = mysqli_real_escape_string($conn, $_POST['password']);
     
@@ -14,9 +17,11 @@ if(isset($_POST["submit"])){
     
         if(mysqli_num_rows($select) > 0){
             $row = mysqli_fetch_assoc($select);
-            header("location:../php/itemlist.php?access=granted");
+            $_SESSION['loggedin'] = true;
+            header("location:../php/admin/itemlist.php?access=granted");
+            exit();
         } else{
-            header("location:../php/login.php?access=declined");
+            header("location:../php/admin/login.php?access=declined");
         }
     }
 }

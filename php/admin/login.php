@@ -2,31 +2,15 @@
 <html lang="eng">
 <head>
     <title>Sweettea</title>
-    <link rel="stylesheet" href="../css/login.css">
-    <script defer src="../js/regLogin.js" type="text/javascript"> </script>
+    <link rel="stylesheet" href="../../css/login.css">
+    <script defer src="../../js/regLogin.js" type="text/javascript"> </script>
     
 </head>
 <body>
-    
-    <header>
 
-        <div class="head">
-            <div class="sweetteas">
-                <img src="../img/login/sweettea logo.png" alt="SweetTea Logo">
-            </div>
-            <div class="tabs">
-                <a href="#">HOME</a>
-                <a href="#">ABOUT US</a>
-                <a href="#">MENU</a>
-                <a href="#" id="coloredsignin">SIGN IN</a>
-            </div>
-        </div>
-
-    </header>
     
-    <img id="cuplove" src="../img/login/cuplove1.png" alt="a cup of love">
-    <img id="vector3" src="../img/login/Vector 3.png" alt="a cup of love">
-    <img id="vector4" src="../img/login/Vector 4.png" alt="a cup of love">
+    <img id="cuplove" src="../../img/login/cuplove1.png" alt="a cup of love">
+
 
     <div class="centerbox">
         <div class="formcontent">
@@ -38,8 +22,8 @@
             
             <div id="formbox">
 
-                <form id="form" action="../includes/login.inc.php" method="post">
-                   
+                <form id="form" action="../../includes/login.inc.php" method="post">
+
                     <div class="labelandbox">
                         <div class="input-control"> 
                             <label for="username" class="userlbl">Username:</label><br>
@@ -64,7 +48,7 @@
                         </div>
                         
                         <div class="signup">
-                           <p> Don't have an account?&nbsp<a href="reg.php">Sign Up</a> </p>
+                            <p> Don't have an account?&nbsp<a href="reg.php">Sign Up</a> </p>
                         </div>
                     </div>
                 </form>
@@ -73,8 +57,6 @@
 
         </div>
     </div>
-
-    <img id="cuplove2" src="../img/login/cuplove.png" alt="a cup of love">
 
 </body>
 

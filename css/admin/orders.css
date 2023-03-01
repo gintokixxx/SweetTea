@@ -1,0 +1,20 @@
+.heading{
+    font-size:30px;
+}
+
+/*TABLE SIZES*/
+#tcustomerid {
+    width:5%;
+}
+
+#tcustomerpayment, #tcustomernews{
+    width: 10%;
+}
+
+#tcustomername, #tcustomerphone {
+    width:15%;
+}
+
+#tpurchasename {
+    width:35%;
+}

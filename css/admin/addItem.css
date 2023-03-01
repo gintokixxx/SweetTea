@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Roboto:wght@500&display=swap');
+
+/*FORM BLOCK ARRANGEMENT*/
+.wcontents{
+    float:right;
+    width:80%;
+    padding-top:5%;
+    padding-left: 5%;
+}
+
+.blocks{
+    width:80%;
+    margin:20px 10px;
+}
+
+.blocks div {
+    width:25%;
+    display: inline-block;
+}
+
+.blocks label{
+    color:#70b6bd;
+    font-size: 20px;
+}
+
+.blocks input {
+    background-color: #EAEEED;
+    border:2px solid #EAEEED;
+    width:74.5%;
+    padding:2%;
+    margin:10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color:#5e5d5d;
+    font-size:13px;
+    text-indent: 2%;
+}
+
+.firstBlock input, .firstBlock select {
+    background-color: #EAEEED;
+    border:2px solid #EAEEED;
+    width:95%;
+    padding:3% 0;
+    margin:10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color:#5e5d5d;
+    font-size:13px;
+    text-indent: 5%;
+}
+
+option {
+    font-size: 14px;
+    background-color: #EAEEED;
+    border: 2px solid #EAEEED;
+    color:#5e5d5d;
+}
+
+option:before {
+    content: ">";
+    font-size: 18px;
+    color: #fff;
+}
+
+option:hover:before {
+    display: inline;
+}
+
+input[type="file"] {
+    background-color: transparent;
+    border:none;
+    padding:1% 0;
+    text-indent: 0;
+}
+
+::-ms-browse {
+    font-family: 'Montserrat', sans-serif;
+    background: #70b6bd;
+    color: white;
+    border: 1px solid #70b6bd;
+    margin-right:2%;
+    padding: 1em;
+}
+
+::-webkit-file-upload-button {
+    font-family: 'Montserrat', sans-serif;
+    background: #70b6bd;
+    color: white;
+    border: 1px solid #70b6bd;
+    margin-right:2%;
+    padding: 1em;
+}
+
+input[type="submit"]{
+    background-color: #70b6bd;
+    color:white;
+    border: none;
+    transition:.2s ease-in;
+}
+
+input[type="submit"]:hover {
+    background-color: #67c1c9;
+}

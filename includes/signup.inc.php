@@ -20,7 +20,7 @@ if(isset($_POST["submit"])){
     if($result > 0){
         $query->close();
         $conn->close();
-        header("location:../php/reg.php?error=username");
+        header("location:../php/admin/reg.php?error=username");
     } else {
         $query->close();
     }
@@ -34,5 +34,5 @@ if(isset($_POST["submit"])){
 
     //GOING BACK TO FRONT PAGE
     
-    header("location:../php/reg.php?error=none");
+    header("location:../php/admin/login.php?error=none");
 }

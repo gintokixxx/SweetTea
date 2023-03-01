@@ -1,0 +1,81 @@
+*{
+    font-family: Outfit;
+    color: #74c5cc;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-image: url('../img/dashboard.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    color: #5e5d5d;
+}
+
+
+/*WCENTER BOX*/
+
+.centerbox{
+    border-radius: 20px;
+    background-color: white    ;
+    margin: auto;
+    height: 80vh;
+    width: 70%;
+    transform: translate(0%, 10%);
+    overflow: hidden;
+    box-shadow: 10px 10px 15px #c9c2c4;
+}
+
+/*WHITE LEFT BOX*/
+
+.whitebox{
+    background-color: #B3DEE2;
+    width: 15%;
+    float:left;
+    height: 100vh;
+    position: fixed;
+}
+
+/*PROFILE WHITE LEFT BOX*/
+.profile{
+    width:100%;
+    height:15%;
+}
+
+.nameaddress{
+    width:100%;
+    padding:10%;
+}
+
+.nameaddress p{
+    font-size: 23px;
+    color: white;
+}
+
+#nemail{
+    font-size: 18px;
+}
+
+.buttonss{
+    width:100%;
+    display:block;
+    padding:5% 10%;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+}
+
+/*CONTENT IN THE MIDDLE*/
+    
+.content h1{
+    font-size: 45px;
+    padding-top:2.5%;
+}
+
+.content p{
+    font-size: 18px;
+    width:70%;
+    color: rgb(83, 82, 82);
+}

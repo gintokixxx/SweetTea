@@ -14,47 +14,6 @@ body{
     background-size: 100%;
 }
 
-/* HEADER */
-header{
-    background-color: #b3dee2;
-    height:100px;
-    width:100%;
-}
-
-header .head{
-    width:70%;
-    height: 100%;
-    margin:auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header a{
-    color: white;
-    font-family: Outfit;
-    text-decoration: none;
-}
-
-header .sweetteas {
-    width:40%;
-    float:left;
-}
-
-header .tabs{
-    float: right;
-    width: 60%;
-    text-align: right;
-}
-
-header .tabs a {
-    padding: 0 30px;
-}
-
-#coloredsignin{
-    color: #e27396;
-}
-
 
 
 
@@ -66,9 +25,9 @@ header .tabs a {
     margin: auto;
     height: 650px;
     width: 55%;
-    transform: translate(0%,15%);
+    transform: translate(0%,20%);
     overflow: hidden;
-    box-shadow: 10px 10px 15px #c9c2c4;
+    box-shadow: 0px 0px 15px #f9f9f9;
 }
 
 #bluebox{

@@ -2,7 +2,7 @@
 <html lang="eng">
 <head>
     <title>Sweettea</title>
-    <script defer src="../js/regValidation.js" type="text/javascript"> </script>
+    <script defer src="../../js/regValidation.js" type="text/javascript"> </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
@@ -21,30 +21,17 @@
 
     </script>
 
-    <link rel="stylesheet" href="../css/registration.css">
+    <link rel="stylesheet" href="../../css/registration.css">
+
 </head>
 <body>
 
     
-    <header>
 
-        <div class="head">
-        <div class="sweetteas">
-            <a href="#">SWEETTEA</a>
-        </div>
-        <div class="tabs">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">MENU</a>
-            <a href="#" id="coloredsignin">SIGN IN</a>
-        </div>
-        </div>
-   
-    </header>
 
     <div class="centerbox">
         <div id="bluebox">
-            <img src="../img/mockup 1.png" alt="milktea" >
+            <img src="../../img/mockup 1.png" alt="milktea" >
         </div>
         
         <div class="formcontent">
@@ -55,7 +42,7 @@
                 </div>
                 
                 <div id="formbox">
-                    <form action="../includes/signup.inc.php" method="post" id="form">
+                    <form action="../../includes/signup.inc.php" method="post" id="form">
                         <div id="labelandboxes">
 
                         <div class="input-control"> 
@@ -89,7 +76,7 @@
                         </div>
 
                         <div id="formfooter">
-                            <p> Already have an account? <a href="https://www.facebook.com">Sign In</a> </p>
+                            <p> Already have an account? <a href="login.php">Sign In</a> </p>
                         </div>                 
                     </form>
                 </div>

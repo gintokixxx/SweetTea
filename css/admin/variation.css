@@ -1,0 +1,29 @@
+.forms label{
+    font-size:25px; 
+}
+
+.forms input[type="text"]{
+    padding:10px 15px;
+    margin:10px 0;
+    margin-right:10px;
+    color:rgb(54, 54, 54);
+}
+
+.forms button {
+    background-color:#eb7dc1;
+    color:white;
+    width:10%;
+    padding: 0.5%;
+    border:1px solid #eb7dc1;
+    margin-top:15px;
+    margin-right:15px;
+}
+
+.forms input[type="submit"]{
+    background-color:#8bc7cc;
+    color:white;
+    width:10%;
+    padding: 0.5%;
+    border:1px solid #8bc7cc;
+    margin-right:15px;
+}

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@300&family=Nunito:wght@300;600&display=swap');
+
+.wcontents{
+    float:right;
+    width:80%;
+    padding:2.5%;
+}
+
+#addItem { 
+    padding:0.8%;
+    width:10%;
+    margin-bottom: 2%;
+    background-color: #74c5cc;
+    border:none;
+    color:white;
+    cursor: pointer;
+}
+
+
+/*TABLE SIZES*/
+#tid {
+    width:5%;
+}
+
+#tname {
+    width:20%;
+}
+
+#ttype, #tvarcount, #tprice {
+    width:10%;
+}
+
+#tcategory{
+    width:15%;
+}
+
+/*TABLE*/
+table {
+    width:100%;
+}
+
+table th, table td {
+    border-bottom:1px solid #B3DEE2;
+    text-align: left;
+    color: black;
+    padding: 1% 0;
+    text-align: center;
+}
+
+table td {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+table th{
+    font-size:17px;
+    border-bottom: 3px solid #74c5cc;
+    background-color: #74c5cc;
+    color:white;
+}
+
+table button{
+    padding:3%;
+    width: 30%;
+    background-color: #EA9AB2;
+    border:none;
+    color:white;
+}
+
+table button:hover{
+    cursor:pointer;
+}
+
+table a{
+    text-decoration: none;
+    color:white;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+#addB{
+    background-color: #74c5cc;
+}
+
+#editB{
+    background-color: rgb(241, 197, 139);
+}
+
+
+/*FOR THE POP UP*/
+/* Pop-up container styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+/* Pop-up content styles */
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 5%;
+    border-radius: 5px;
+}
+
+.popup-content p{
+    font-size:18px;
+    padding: 10px 0 ;
+    color:#5e5d5d;
+    font-weight:300;
+}
+
+#popup-p{
+    width:100%;
+}
+
+#popup-buttons {
+    margin:5px 0;
+    width:70%;
+    float:right;
+    text-align: right;
+}
+
+.pop-up-buttons {
+    width:45%;
+    margin: 0 2.5px;
+    padding:10px;
+    border:2px solid #74c5cc;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#delete-btn {
+    border: 2px solid #f08989;
+    color:#f08989;
+    transition: .2s ease-out;
+}
+
+#delete-btn:hover {
+    background-color: #f08989;
+    color:white;
+}
