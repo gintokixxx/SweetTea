@@ -26,6 +26,10 @@ if (isset($_POST["submitButton"])) {
         $userAddons = $userAddonsArray[$i];
         $userSubtotal = $userSubtotalArray[$i];
 
+        if(substr($userAddons, -2) == ", ") {
+            $userAddons = substr_replace($userAddons, "", -2);
+        }
+
         $select = mysqli_query($conn, "SELECT * FROM `items_variation` WHERE pr_name = '$productName' AND pr_variation_price = $productPrice") or die("Select Failed");
         if($select){
             while($row = mysqli_fetch_assoc($select)){
@@ -36,6 +40,8 @@ if (isset($_POST["submitButton"])) {
         $sql = "UPDATE usercart SET user_quantity = $userQuantity, pr_size = '$productSize', pr_price = $productPrice, user_addons = '$userAddons', user_subtotal = $userSubtotal WHERE cart_id = $cartId;"; 
         mysqli_query($conn, $sql) or die("Query Failed");
     }
+
+    header("location:../php/users/checkout.php");
 
     $conn->close();
 }

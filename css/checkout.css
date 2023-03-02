@@ -253,15 +253,9 @@ div > label{
 }
 
 .order-summary > h1{
-    text-indent: 2%;
     margin: 0 5%;
-    word-spacing: 430px;
-
+    word-spacing: 350px;
 }
-
-
-
-
 
 /*FOOTER*/
 .footer{

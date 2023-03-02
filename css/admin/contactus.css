@@ -1,0 +1,8 @@
+.heading{
+    font-size:30px;
+}
+
+#tname, #temail, #tsubject, #tinputs{
+    width:10%;
+}
+

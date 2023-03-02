@@ -7,16 +7,6 @@
 }
 
 /*HEADER*/
-
-header{
-    background-color: #EFCFE3;
-}
-
-.heading{
-    width: 100%;
-    height: 10%;
-}
-
 .sweettealogo{
     float: left;
     width: 20% ;
@@ -27,7 +17,7 @@ header{
 .sweettealogo img{
     width: 40%;
     height: 50%;
-    margin: 6% 30%;
+    margin: 6% 40%;
 }
 
 .tabs{
@@ -36,19 +26,16 @@ header{
     float: right;
     display: flex;
     justify-content: end;
+    align-items: center;
 }
 
 .tabs a{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    font-family: lato;
+    font-family: 'Playfair Display', serif;
     text-decoration: none;
     font-size: 1em;
     color: black;
-    height: 100%;
     width: 10%;
-    margin: 0 3%;
+    margin:3%  3%;
 }
 
 #cart{
@@ -70,22 +57,13 @@ header{
     font-weight: 600;
 }
 
-/*MULTIPLE POLAROID CART ORDER*/
-.cartorder{
-    margin:20px 0;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
-
 /*POLAROID CART ORDER*/
 .varorder{
     width: 60%;
     height: 55vh;
     background-color: #D9F0EE;
     border-radius: 2%;
-    margin: 0 10%;
+    margin: 1% 10%;
 }
 
 /*PICTURE OF THE PRODUCT*/
@@ -132,10 +110,20 @@ header{
 }
 
 /*ADDONS CHECHBOX*/
-.variationcheckbox{
+
+.classicmilktea{
+    font-size:20px;
+}
+
+.items{
+    display: block;
+}
+
+.items label{
     float: left;
-    width: 50%;
-    margin: 4% 2%;
+    text-align: left;
+    width: 15%;
+
 }
 
 .exitbutton{
@@ -156,63 +144,149 @@ header{
 #addons{
     font-size: 2.5em;
     font-weight: 600;
+    text-align: left;
+    padding-top:5%;
 }
 
-.variation1{
+.select-variation, .quantity-input{
+    text-align: left;
     float: left;
-    width: 30%;
-    margin: 3% 0;
+    margin:10px 0;
+    margin-right: 15px;
+
+    font-size: 18px;
 }
 
-.variation1 label{
-    font-size: 1.5em;
+.psubtotal{
+    text-align: left;
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 25.2%;
+    font-size: 20px;;
 }
 
-.variation2{
-    float: left;
-    width: 30%;
-    margin: 3% 10%;
+.itemsnacks{
+    width: 100%;    
 }
 
-.variation2 label{
-    font-size: 1.5em;
+.itemsnacks .varorder{
+    height: 40vh;
 }
 
-/*SIZE AND QUANTITY TEXTBOX*/
-.sizequantity{
-    float: left;
-    height: 30%;
-    margin: -2.5% 0.5%;
-}
-
-.sandq{
-    width: 100%;
-}
-
-.sandq input{
+.itemsnacks .polaroidcontainer{
     width: 25%;
-    height: auto;
-    padding: 3%;
-    margin: 2%;
-    font-size: 1.5em;
 }
 
-.totalprice{
-    width: 25%;
-    display: flex;
-    align-items: end;
-    margin: 0 2%;
+.itemsnacks .psubtotal{
+    margin-top: 2%;
+    margin-left: 19.5%;
+    font-size: 20px;;
 }
 
-.totalprice label{
-    font-size: 1.5em;
-    height: 100%;
-    float: left
+.submitButton{
+    padding:0.5% 2.5%;
+    font-size: 20px;
+    background-color: #E27396;
+    color: white;;
+    border: 1px solid #E27396;
+    margin-bottom: 30px;
 }
 
-.totalprice p{
-    font-size: 3em;
-    font-weight: 600;
-    float: left;
-    margin: 0 5%;
+*,
+
+*::before,
+
+*::after {
+    box-sizing: border-box;
 }
+
+:root{
+    --clr-pink: #EFCFE3;
+    --clr-dpink: #E27396;
+    --clr-green:  #D9F0EE;
+    --clr-blue:  #D9EEF0;
+    --clr-yellow:  #F0EED9;
+    --clr-light: #FFF;
+    --clr-dark:  #5A5557;
+
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --grid: 1fr;
+}
+
+/*BODY*/
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.125rem;
+    color: var(--clr-dark);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*FIRST SECTION*/
+.sec1{
+    height: 930px;
+}
+
+/*GRIDS*/
+.grid-container{
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) ;
+    gap: 20px;
+}
+
+/*THIRD SECTION*/
+.footerlogo{
+    grid-column: span 5;
+    padding: 15%;
+}
+
+.quicklink{
+    grid-column: 6 / span 3;
+    padding: 15%;
+
+}
+
+.quicklink > h3{
+    text-align: left;
+    font-family: 'Playfair Display';
+    padding: 0 10px;
+    color:  black;
+}
+
+.quicklink > nav{
+    text-align: left;
+}
+
+.quicklink > nav > a{
+    font-size: 16px;
+}
+
+.contactus{
+    grid-column: 9 / span 3;
+    padding: 15%;
+}
+
+.contactus > h3{
+    text-align: left;
+    font-family: 'Playfair Display';
+    font-weight: var(--fw-bold);
+    color:  black;
+}
+.contactus > nav{
+    text-align: left;
+}
+
+.contactus > nav > h3{
+    text-align: left;
+    font-size: 16px;
+}
+

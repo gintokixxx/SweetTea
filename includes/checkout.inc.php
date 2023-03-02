@@ -2,9 +2,13 @@
 
 if (isset($_POST["submit"])) {
 
+
     include "../classes/dbh.classes.php";
 
-    $selectCart = mysqli_query($conn, "SELECT * FROM `usercart`") or die("Query Failed");
+    session_start();
+    $user_id = $_SESSION['user_id'];
+
+    $selectCart = mysqli_query($conn, "SELECT * FROM `usercart` WHERE user_id = '$user_id'") or die("Query Failed");
     $purchaseName = "";
     $purchaseTotal = 0;
     $count = mysqli_num_rows($selectCart);
@@ -36,10 +40,12 @@ if (isset($_POST["submit"])) {
     $sql = "INSERT INTO order_history (customer_name, customer_phone, customer_payment, customer_news, customer_purchase, customer_total) VALUES 
     ('$customerName', '$customerNumber', '$customerPayment', '$customerNews', '$purchaseName', '$purchaseTotal');";
 
-    $delete = "DELETE FROM usercart; ";
+    $delete = "DELETE FROM usercart WHERE user_id = '$user_id'; ";
     
     mysqli_query($conn, $sql) or die("Insert Failed");
     mysqli_query($conn, $delete) or die("Delete Cart Failed");
+
+    header("location:../php/users/Order Success/success.php");
 
     $conn->close();
 }

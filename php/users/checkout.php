@@ -4,27 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HeaderFooter Template</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="../../css/checkout.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <?php
         include "../../classes/dbh.classes.php";
+
+        session_start();
+
+        if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+
+        } else {
+            header('Location: userSignin.php?access=denied');
+            exit();
+        }
     ?>
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="grid-container">
-        <img src="img sources/header & footer/Sweettea logo.svg" alt="sweettea">
+        <img src="../../img/users/Sweettea logo.svg" alt="sweettea">
         <nav>
-            <a href="/">Home</a>
-            <a href="/">About Us</a>
-            <a href="/">Menu</a>
-            <a id="cart" href="/">Cart</a>
+            <a href="./Home Page/home.php">Home</a>
+            <a href="./AboutUs/aboutus.php">About Us</a>
+            <a href="menuMilktea.php">Menu</a>
+            <a id="cart" href="cart.php">Cart</a>
         </nav>
     </header>
 
-    <div class="midcart">
+    <div class="midcart" id="top">
         <h3>Cart</h3> 
     </div>
     
@@ -88,10 +99,12 @@
 
         <!--Order Summary-->
         <div class="order-summary">
-            <h2>Order Summary <a href="#">Edit Cart</a> </h2>
+            <h2>Order Summary <a href="cart.php">Edit Cart</a> </h2>
             <?php
-            $select = mysqli_query($conn, "SELECT * FROM usercart") or die("Query Failed");
+            $user_id = $_SESSION['user_id'];
+            $select = mysqli_query($conn, "SELECT * FROM usercart WHERE user_id = '$user_id'") or die("Query Failed");
             
+            $total = 0;
             $count = 1;
             if($select){
 
@@ -105,6 +118,8 @@
                     $addons = $row['user_addons'];
                     $subtotal = $row['user_subtotal'];
                     $cartId = $row['cart_id'];
+
+                    $total += $subtotal;
 
                     $selectImg = mysqli_query($conn, "SELECT image_url FROM items_img WHERE pr_name = '$name'");
                     $imgRow = mysqli_fetch_assoc($selectImg);
@@ -136,7 +151,7 @@
             <div class="detail">
                 <p>Pick-Up at SweetTea Bangkal Branch</p>
             </div>
-            <h1>TOTAL P900</h1>
+            <h1>TOTAL P<?php echo $total?></h1>
         </div>
     </div>
     </form>
@@ -144,18 +159,18 @@
     <section class="foot">
         <footer class="grid-container">
             <div class="footerlogo">
-                <img src="img sources/header & footer/sweetteafooter.svg" alt="SweetTea Makati">
+                <img src="../../img/users/sweetteafooter.svg" alt="SweetTea Makati">
             </div>
             
             <div class="quicklink">
                 <h3>Quick Links</h3>
                 
                 <nav>
-                    <a href="#">Home</a><br>
-                    <a href="#">About Us</a><br>
-                    <a href="#">Menu</a><br>
-                    <a href="#">Sign In</a><br>
-                    <a href="#">Top</a>
+                    <a href="./Home Page/home.php">Home</a><br>
+                    <a href="./AboutUs/aboutus.php">About Us</a><br>
+                    <a href="menuMilktea.php">Menu</a><br>
+                    <a href="userSignin.php">Sign In</a><br>
+                    <a href="#top">Top</a>
                 </nav>
             </div>
     
@@ -166,8 +181,8 @@
                     <h3>2001 A&M Bldg M. Reyes St.</h3>
                     <h3>sweettea.bangkal@gmail.com</h3>
                     <h3>09455792955</h3>
-                    <a href="#"><img src="img sources/header & footer/Facebook.svg" alt="Facebook"></a>
-                    <a href="#"><img src="img sources/header & footer/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="../../img/users/Facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="../../img/users/instagram.svg" alt="Instagram"></a>
                 </nav>
             </div>
         </footer>

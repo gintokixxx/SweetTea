@@ -1,0 +1,374 @@
+John-Loyd Gracia Billano
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+*,
+
+*::before,
+
+*::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-pink: #EFCFE3;
+    --clr-dpink: #E27396;
+    --clr-green:  #D9F0EE;
+    --clr-blue:  #D9EEF0;
+    --clr-yellow:  #F0EED9;
+    --clr-light: #FFF;
+    --clr-dark:  #5A5557;
+
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --grid: 1fr;
+}
+
+
+/*GRID*/
+.grid-container{
+    max-width: 1240px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) ;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/*BODY*/
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.125rem;
+    color: var(--clr-dark);
+    line-height: 1.6;
+
+    background-image: url(paralaximg.svg);
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+a{
+    text-decoration: none;
+}
+
+.knowmorea {
+    color:#E27396;
+}
+
+/*HEADER*/
+header{
+    padding: 20px 40px;
+    height: 10%;
+    align-items: center;
+    background-color: white;
+}
+
+.head{
+    display: grid;
+    align-items: center;
+    height: 100%;
+
+}
+
+.grid-container > div{
+    text-align: center;
+}
+
+.head > img{
+    grid-column: span 6;
+}
+
+/*NAVIGATION*/
+.head > nav{
+    grid-column: span 6;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    font-weight: var(--fw-normal);
+    letter-spacing: 1px;
+}
+
+.grid-container nav a{
+    margin: 0 5%;
+    text-decoration: none;
+    color: #776E71;
+}
+
+#cart{
+    color: var(--clr-dpink);
+}
+
+/*SECTION 2: KNOW MORE*/
+.knowmore{
+    border: 1px solid white;
+    background-color: white;
+    height: 90%;
+}
+
+.about{
+    margin: 5% auto;
+    width: 100%;
+}
+
+
+.about > h2{
+    font-size: 76px;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    text-align: center;
+}
+
+.about > h4{
+    font-size: 36;
+    text-align: center;
+}
+
+.about > p{
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+}
+
+.about > button{
+    border-radius: 30px;
+    border: 2px solid white;
+    margin: 1% 43%;
+    width: 265px;
+    height: 90px;
+    font-size: 32px;
+    color: var(--clr-dpink);
+}
+
+/*SECTION 2 BRANCHES*/
+
+.branches{
+    height: auto;
+    font-family: 'Outfit';
+    background-color: var(--clr-pink);
+}
+
+#heart{
+    padding-top: 2%;
+}
+
+.branches > center > h2{
+    font-size: 76px;
+    color: white;
+}
+
+.branches > center > h4{
+    font-size: 35px;
+    color: white;
+}
+
+.card{
+    background-color: white;
+    border-radius: 25px;
+    margin: 3% 1%;
+    width: 385px;
+    height: 615px;
+    padding: 1%;
+}
+
+.card1{
+    background-color: white;
+    border-radius: 25px;
+    width: 485px;
+    height: 715px;
+    padding: 1%;
+}
+
+.branchpictures{
+    display: flex;
+    justify-content: center;
+}
+
+.branchpictures > .rizal > h3{
+    font-size: 30px;
+    margin: 5% 0;
+}
+
+.branchpictures > .manila > h3{
+    font-size: 35px;
+    margin: 5% 0;
+}
+
+.branchpictures > .makati > h3{
+    font-size: 35px;
+    margin: 5% 0;
+}
+
+.otherbranch{
+    margin: 3% 0;
+}
+
+.otherbranch > h3{
+    width: 20%;
+    margin: 0 20%;
+    text-align: left;
+    font-size: 35px;
+    color: var(--clr-dpink);
+}
+
+.otherbranch > ul{
+    display: flex;
+    margin: 1% 20%;
+}
+
+.otherbranch > ul > li{
+    margin: 0 5%;
+    font-size: 40px;
+    color: var(--clr-dpink);
+}
+
+.otherbranch > ul > li > span{
+    font-size: 35px;
+    color: black;
+}
+
+.otherbranch > center >h2{
+    font-size: 76px;
+    color: var(--clr-dpink);
+}
+
+.otherbranch > center > p{
+    width: 45%;
+    font-size: 24px;
+}
+
+.otherbranch > center > button{
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: white;
+    margin: 2% 0;
+    width: 240px;
+    height: 55px;
+    font-size: 25px;
+    font-family: 'Outfit';
+    font-weight: 700;
+    color: var(--clr-dpink);
+}
+
+/*PARALAX SECTION*/
+.paralax{
+    height: 400px;
+}
+
+/*SECTION 3 FAQS*/
+.faq{
+    background-color: var(--clr-pink);
+    border: 1px solid var(--clr-pink);
+    font-family: 'Outfit';
+}
+
+.faq > center > h1{
+    padding: 2%;
+}
+
+.fcard{
+    margin: 0 15%;
+    width: 60%;
+} 
+
+.fcard li{
+    list-style: none;
+    width: 100%;
+    margin: 5%;
+    padding: 1%;
+    border-radius: 15px;
+    background-color: #FFF;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15);
+}
+
+.fcard li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--clr-dpink);
+    cursor: pointer;
+}
+
+label::before{
+    margin-right: 10px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.fcard .answer{
+    border-top: 1px solid;
+    text-align: justify;
+    color: var(--clr-dark);
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.fcard input[type="radio"]:checked + label + .answer{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+/*FOOTER*/
+footer{
+    background-color: white;
+}
+
+.footerlogo{
+    grid-column: span 5;
+    padding: 15%;
+}
+
+.quicklink{
+    grid-column: 6 / span 3;
+    padding: 15%;
+
+}
+
+.quicklink > h3{
+    text-align: left;
+    font-family: 'Playfair Display';
+    padding: 0 10px;
+    color:  black;
+}
+
+.quicklink > nav{
+    text-align: left;
+}
+
+.quicklink > nav > a{
+    font-size: 16px;
+}
+
+.contactus{
+    grid-column: 9 / span 3;
+    padding: 15%;
+}
+
+.contactus > h3{
+    text-align: left;
+    font-family: 'Playfair Display';
+    color:  black;
+}
+.contactus > nav{
+    text-align: left;
+}
+
+.contactus > nav >h3{
+    text-align: left;
+    font-size: 16px;
+}

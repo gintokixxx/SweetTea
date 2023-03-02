@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+
     <link rel="stylesheet" href="../../css/cart.css">
+
     <?php
         include "../../classes/dbh.classes.php";
+
+        session_start();
+
+        if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+
+        } else {
+            header('Location: userSignin.php?access=denied');
+            exit();
+        }
     ?>
     
 </head>
@@ -16,27 +27,30 @@
         <div class="heading">
 
             <div class="sweettealogo">
-                <img src="sweettea logo.png" alt="SweetTea Logo">
+                <img src="../../img/users/Sweettea logo.svg" alt="SweetTea Logo">
             </div>
 
             <div class="tabs">
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Menu</a>
-                <a id="cart" href="#">Cart</a>
+                <a href="./Home Page/home.php">Home</a>
+                <a href="./AboutUs/aboutus.php">About Us</a>
+                <a href="menuMilktea.php">Menu</a>
+                <a id="cart" href="cart.php">Cart</a>
             </div>
 
         </div>
     </header>
 
-    <div class="content">
+    <div class="content" id="top">
         <p id="midcart">Cart</p>
     </div>
 
+    <center>
     <form action="../../includes/cartsubmit.inc.php" method="post" id="form">
     <div class="cart">
     <?php
-        $select = mysqli_query($conn, "SELECT * FROM usercart") or die("Query Failed");
+
+        $user_id = $_SESSION['user_id'];
+        $select = mysqli_query($conn, "SELECT * FROM usercart  WHERE user_id = '$user_id'") or die("Query Failed");
         
         $count = 1;
         if($select){
@@ -68,7 +82,7 @@
                             </div>
         
                             <div class="milkteaname">
-                                <label for="classicmilktea">'.$name.'</label>
+                                <p class="classicmilktea">'.$name.'</p>
                             </div>
         
                         </div>
@@ -78,9 +92,9 @@
                         <a href="../../includes/deletecart.inc.php?deleteid='.$cartId.'">X</a>
                     </div>
         
-                    <div class="item"> 
+                    <div class="items"> 
 
-                        <label id="addons" for="Addons">Add Ons</label><br>
+                        <p id="addons">Add Ons</p><br>
 
                         <label> <input type="checkbox" class="checkbox" value="5"> Creamcheese </label> 
                         <label> <input type="checkbox" class="checkbox" value="5"> Pearls </label> <br>
@@ -115,8 +129,8 @@
                         echo ' 
                         </select> 
                         <input type="number" value="1" class="quantity-input">
-                        <br>
-                        <p>Total <span  class="subtotal"> '.$price.'</span></p>
+                        <br><br>
+                        <p class="psubtotal">Total <span  class="subtotal"> '.$price.'</span></p>
 
                         <input type="hidden" name="cartProductId[]" value="'.$id.'">
                         <input type="hidden" name="cartCartId[]" value="'.$cartId.'">
@@ -133,18 +147,22 @@
                     ';
                 } else {
                     echo '
-                    <div class="item"  id="'.$cartId.'">
+                    <div class="item itemsnacks"  id="'.$cartId.'">
                         <div class="varorder">
-                            <div class="polaroidcontainer">
+                            <div class="polaroidcontainer" id="snacksImg">
                                 <div class="polaroid">
-                                    <div class="picture">
+                                    <div class="picture" >
                                         <img src="../../img/uploads/'.$imgRow['image_url'].'">
                                     </div>
                                 </div>
                             </div>   
+
+                            <div class="exitbutton">
+                                <a href="../../includes/deletecart.inc.php?deleteid='.$cartId.'">X</a>
+                            </div>
                             
                             <div class="item">
-                                <h3> '.$name.' </h3>';
+                                <h3 id="addons"> '.$name.' </h3>';
                                 $selectVariation = mysqli_query($conn, "SELECT * FROM items_variation WHERE pr_name='$name' ORDER BY pr_variation_price ASC;") or die("Query Failed");
 
                                 echo '<select name="item_variation[]" class="select-variation">';
@@ -161,7 +179,7 @@
                                 </select> 
                                 <input type="number" value="1" class="quantity-input">
                                 <br>
-                                <p>Total <span  class="subtotal"> '.$price.'</span></p>
+                                <p class="psubtotal">Total <span  class="subtotal"> '.$price.'</span></p>
 
                                 <input type="hidden" name="cartProductId[]" value="'.$id.'">
                                 <input type="hidden" name="cartCartId[]" value="'.$cartId.'">
@@ -173,9 +191,6 @@
                                 
                             </div>
                 
-                            <div class="exitbutton">
-                                <a href="../../includes/deletecart.inc.php?deleteid='.$cartId.'">X</a>
-                            </div>
                         </div>
                     </div>
                     ';
@@ -184,9 +199,41 @@
         }
     ?>
 
-        <input type="submit" name="submitButton" value="Submit" >
+        <input type="submit" name="submitButton" value="Submit" class="submitButton">
     </form>
+    </center>
+    
+    <section class="sec3">
+        <div class="grid-container">
+            <div class="footerlogo">
+                <img src="../../img/users/sweetteafooter.svg" alt="SweetTea Makati">
+            </div>
+            
+            <div class="quicklink">
+                <h3>Quick Links</h3>
+                
+                <nav>
+                    <a href="./Home Page/home.php">Home</a><br>
+                    <a href="./AboutUs/aboutus.php">About Us</a><br>
+                    <a href="menuMilktea.php">Menu</a><br>
+                    <a href="userSignin.php">Sign In</a><br>
+                    <a href="#top">Top</a>
+                </nav>
+            </div>
 
+            <div class="contactus">
+                <h3>Contact Us</h3>
+                
+                <nav>
+                    <h3>2001 A&M Bldg M. Reyes St.</h3>
+                    <h3>sweettea.bangkal@gmail.com</h3>
+                    <h3>09455792955</h3>
+                    <a href="https://www.facebook.com/sweettea.bangkal" target="_blank"><img src="../../img/users/Facebook.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/sweetteabangkal" target="_blank"><img src="../../img/users/instagram.svg" alt="Instagram"></a>
+                </nav>
+            </div>
+        </div>
+    </section>  
     <script type="text/javascript">
         // Get the saved cart data from localStorage
         var cartData = localStorage.getItem('cartData');
@@ -293,17 +340,21 @@
         hiddenSubtotal.value = parseFloat(subtotalElement.textContent);
 
         let selectedLabels = "";
+        let completedLabels = "";
 
         checkboxes.forEach((checkbox) => {
             if (checkbox.checked) {
                 const label = checkbox.parentElement.textContent.trim();
                 selectedLabels += label + ", ";
-                if (selectedLabels.endsWith(", ")) {
-                    selectedLabels = selectedLabels.slice(0, -2);
-                }
-                hiddenAddons.value = selectedLabels;
+                completedLabels = selectedLabels;
             }
         });
+
+        if (completedLabels.endsWith(", ")) {
+            completedLabels = completedLabels.slice(0, -2);
+        }
+
+        hiddenAddons.value = completedLabels;
 
         //GETTING VALUE WHEN USER INTERACTS WITH THE ITEMS
         quantityInput.addEventListener("change", () =>{
@@ -322,28 +373,20 @@
                 const label = checkbox.parentElement.textContent.trim();
                 selectedLabels += label + ", ";
 
-                if (selectedLabels.endsWith(", ")) {
-                    selectedLabels = selectedLabels.slice(0, -2);
-                }
-
                 hiddenAddons.value = selectedLabels;
+                console.log(hiddenAddons.value);
                 hiddenSubtotal.value = parseFloat(subtotalElement.textContent);
             } else {
                 const label = checkbox.parentElement.textContent.trim();
                 selectedLabels = selectedLabels.replace(label + ", ", "");
-
-                if (selectedLabels.endsWith(", ")) {
-                    selectedLabels = selectedLabels.slice(0, -2);
-                }
                 
                 hiddenAddons.value = selectedLabels;
+                console.log(hiddenAddons.value);
                 hiddenSubtotal.value = parseFloat(subtotalElement.textContent);
             }
             });
         });
 
-
-        
         // Call the updateItem function on change events
         quantityInput.addEventListener('change', () => updateItem(cartId));
         selectVariation.addEventListener('change', () => updateItem(cartId));

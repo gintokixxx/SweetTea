@@ -44,6 +44,7 @@
                 <a href="reports.php" id="report" class="buttonss"> Reports</a>
                 <a href="orders.php" id="order" class="buttonss"> Orders</a>
                 <a href="itemlist.php" id="item" class="buttonss"> Items</a>
+                <a href="contactus.php" id="item" class="buttonss"> Reviews</a>
                 <a href="logout.php" id="item" class="buttonss"> Log Out </a>
             </div>
         </div>

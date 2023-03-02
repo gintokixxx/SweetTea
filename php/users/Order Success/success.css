@@ -1,0 +1,160 @@
+John-Loyd Gracia Billano
+/*
+font-family: 'Lato', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+*,
+
+*::before,
+
+*::after {
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-pink: #EFCFE3;
+    --clr-dpink: #E27396;
+    --clr-green:  #D9F0EE;
+    --clr-blue:  #D9EEF0;
+    --clr-yellow:  #F0EED9;
+    --clr-light: #FFF;
+    --clr-dark:  #5A5557;
+    --clr-gray: #837E81;
+    --clr-lightblue: #D9F0EE;
+
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --grid: 1fr;
+}
+
+a{
+    text-decoration: inherit;
+    color:inherit;
+}
+
+/*GRID*/
+.grid-container{
+    max-width: 1240px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr) ;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/*BODY*/
+body{
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.125rem;
+    color: var(--clr-dark);
+    line-height: 1.6;
+}
+
+/*HEADER*/
+header{
+    background-color: var(--clr-pink);
+    padding: 20px 0;
+}
+
+.grid-container img{
+    grid-column: span 6;
+}
+
+/*NAVIGATION*/
+.grid-container > nav{
+    grid-column: span 6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
+    font-weight: var(--fw-normal);
+    letter-spacing: 1px;
+}
+
+.grid-container nav a{
+    margin: 0 5%;
+    text-decoration: none;
+    color: #776E71;
+}
+
+#cart{
+    color: var(--clr-dpink);
+}
+
+/*ORDER SUCCESS SECTION*/
+.bluebox{
+    background-color: var(--clr-lightblue);
+    border-radius: 50px;
+    grid-column: 2 / span 10;
+    display: block;
+    margin: 10% 0;
+}
+
+.bluebox > img{
+    margin: 0 25%;
+}
+
+.bluebox > button{
+    border: 1px solid var(--clr-pink);
+    background-color: var(--clr-pink);
+    font-family: 'Lato';
+    font-size: 20px;
+    margin: 5% 43%;
+    width: 170px;
+    height: 48px;
+    border-radius: 15px;
+}
+
+/*FOOTER*/
+.footer{
+    border: 1px solid;
+}
+
+.footerlogo{
+    grid-column: span 5;
+    padding: 15%;
+}
+
+.quicklink{
+    grid-column: 6 / span 3;
+    padding: 15%;
+
+}
+
+.quicklink > h3{
+    text-align: left;
+    font-family: 'Playfair Display';
+    padding: 0 10px;
+    color:  black;
+}
+
+.quicklink > nav{
+    text-align: left;
+}
+
+.quicklink > nav > a{
+    font-size: 16px;
+}
+
+.contactus{
+    grid-column: 9 / span 3;
+    padding: 15%;
+}
+
+.contactus > h3{
+    text-align: left;
+    font-family: 'Playfair Display';
+    color:  black;
+}
+
+.contactus > nav{
+    text-align: left;
+}
+
+.contactus > nav >h3{
+    text-align: left;
+    font-size: 16px;
+}
